@@ -1,8 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
+const { mongoose } = require('./server/database');
 
 const app = express();
-const { mongoose } = require('./database');
 
 //Settings
 app.set('port', process.env.PORT || 3000);
@@ -11,9 +11,9 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 app.use(express.json());
 
-//Routes
+//Router
 
-//Star server
+//Start server
 app.listen(app.get('port'), () => {
-    console.log('Escuchando en el puerto: ', app.get('port'));
+    console.log('Servidor corriendo el puerto: ', app.get('port'));
 })
