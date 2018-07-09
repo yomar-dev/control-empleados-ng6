@@ -8,4 +8,4 @@ const EmpleadoSchema = new Schema({
     salario: { type: Number, required: true }
 });
 
-module.exports = mongoose.model(EmpleadoSchema);
+module.exports = mongoose.model('Empleado', EmpleadoSchema);
